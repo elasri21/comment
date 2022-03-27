@@ -1,0 +1,256 @@
+section {
+  background-color: $vlg;
+  padding: 20px;
+  .comment {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: $white;
+    border-radius: 6px;
+    display: flex;
+    margin-bottom: 20px;
+    @media #{$small} {
+      width: 100%;
+    }
+    @media #{$mobile} {
+      width: 100%;
+      display: block;
+      padding-bottom: 60px;
+      .upgrade {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        flex-wrap: nowrap;
+        padding: 5px 8px;
+        width: 120px !important;
+        span {
+          width: 33px !important;
+          display: inline-block !important;
+        }
+      }
+      .content {
+        width: 100% !important;
+        .info {
+          width: 100% !important;
+          .reply,
+          .delete-cancel {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+          }
+        }
+      }
+    }
+    &.reply-comment {
+      width: 100%;
+    }
+    // justify-content: space-evenly;
+    .upgrade {
+      width: 40px;
+      background-color: $vlg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      margin-right: 20px;
+      span {
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: $mainBg;
+        cursor: pointer;
+        font-size: $pSize;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $buttonBg;
+        }
+        &.grade {
+          color: $buttonBg;
+        }
+      }
+    }
+    .content {
+      width: calc(100% - 55px);
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+          }
+          .name {
+            font-size: 18px;
+            font-weight: 700;
+            color: $nameColor;
+            margin-right: 15px;
+          }
+          .you {
+            background-color: $buttonBg;
+            color: $white;
+            display: inline-block;
+            padding: 2px 6px;
+            margin-right: 15px;
+          }
+          .time {
+            font-size: 14px;
+            font-weight: 400;
+            color: $cancelBg;
+            margin-right: 15px;
+          }
+        }
+      }
+      .disc {
+        p {
+          font-size: $pSize;
+          color: $cancelBg;
+          margin-top: 15px;
+          font-weight: 400;
+          .user {
+            color: $buttonBg;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .replies {
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 70px;
+    @media #{$small} {
+      width: 100% !important;
+    }
+    @media #{$mobile} {
+      width: 100% !important;
+      padding-left: 0px;
+      &::before {
+        display: none !important;
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      content: "";
+      height: 100%;
+      width: 2px;
+      background-color: $lightgray;
+    }
+  }
+  .add-comment {
+    position: relative;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media #{$mobile} {
+      img {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        width: 40px !important;
+        height: 40px !important;
+      }
+      .type-comment {
+        width: 100% !important;
+      }
+      .submit {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .type-comment {
+      width: calc(100% - 140px);
+      min-height: 100px;
+      padding: 15px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: $cancelBg;
+      border: 1px solid $lightgray;
+      transition: border 0.5s ease;
+      border-radius: 10px;
+      &:hover {
+        cursor: pointer;
+        border-color: $nameColor;
+      }
+    }
+    .submit {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      background-color: $buttonBg;
+      color: $white;
+      cursor: pointer;
+      height: fit-content;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.panel {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(black, 0.6);
+  @media #{$mobile} {
+    height: 100%;
+  }
+  .content-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    padding: 20px 15px;
+    background-color: $vlg;
+    border-radius: 6px;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: $nameColor;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: $pSize;
+      font-weight: 400;
+      color: $cancelBg;
+      margin-bottom: 10px;
+    }
+    .cancel {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

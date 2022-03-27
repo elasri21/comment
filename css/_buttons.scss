@@ -1,0 +1,39 @@
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &.reply-btn {
+    color: $buttonBg;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &.delete {
+    margin-right: 10px;
+    color: $softRed;
+    &:hover {
+      color: $paleRed;
+    }
+  }
+  i {
+    margin-right: 5px;
+  }
+  &.no {
+    color: $vlg;
+    background-color: $cancelBg;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border-radius: 6px;
+  }
+  &.yes {
+    color: $vlg;
+    background-color: $softRed;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border-radius: 6px;
+  }
+}

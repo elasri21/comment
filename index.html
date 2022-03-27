@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Frontend Mentor | Interactive comments section</title>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <!-- first comment -->
+        <div class="comment">
+            <div class="upgrade">
+                <span class="plus"><i class="fas fa-plus"></i></span>
+                <span class="grade">12</span>
+                <span class="minus"><i class="fas fa-minus"></i></span>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <div class="profile">
+                        <img src="images/avatars/image-amyrobson.png" alt="">
+                        <span class="name">amyrobson</span>
+                        <span class="time">1 month ago</span>
+                    </div>
+                    <div class="reply">
+                        <button class="reply-btn"><i class="fas fa-reply"></i>Reply</button>
+                    </div>
+                </div>
+                <div class="disc">
+                    <p>If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+                </div>
+            </div>
+        </div>
+        <!-- second comment -->
+        <div class="comment">
+            <div class="upgrade">
+                <span class="plus"><i class="fas fa-plus"></i></span>
+                <span class="grade">5</span>
+                <span class="minus"><i class="fas fa-minus"></i></span>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <div class="profile">
+                        <img src="images/avatars/image-maxblagun.png" alt="">
+                        <span class="name">maxblagun</span>
+                        <span class="time">2 weeks ago</span>
+                    </div>
+                    <div class="reply">
+                        <button class="reply-btn"><i class="fas fa-reply"></i>Reply</button>
+                    </div>
+                </div>
+                <div class="disc">
+                    <p>Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!</p>
+                </div>
+            </div>
+        </div>
+        <div class="replies">  
+            <!-- reply comment -->
+            <div class="comment reply-comment">
+                            <div class="upgrade">
+                                <span class="plus"><i class="fas fa-plus"></i></span>
+                                <span class="grade">4</span>
+                                <span class="minus"><i class="fas fa-minus"></i></span>
+                            </div>
+                            <div class="content">
+                                <div class="info">
+                                    <div class="profile">
+                                        <img src="images/avatars/image-ramsesmiron.png" alt="">
+                                        <span class="name">ramsesmiron</span>
+                                        <span class="time">1 week ago</span>
+                                    </div>
+                                    <div class="reply">
+                                        <button class="reply-btn"><i class="fas fa-reply"></i>Reply</button>
+                                    </div>
+                                </div>
+                                <div class="disc">
+                                    <p> <Span class="user">@maxblagun</Span> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+                                </div>
+                            </div>
+            </div>
+            <!-- reply comment -->
+            <div class="comment reply-comment my-reply">
+                <div class="upgrade">
+                    <span class="plus"><i class="fas fa-plus"></i></span>
+                    <span class="grade">2</span>
+                    <span class="minus"><i class="fas fa-minus"></i></span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <div class="profile">
+                            <img src="images/avatars/image-juliusomo.png" alt="">
+                            <span class="name">juliusomo</span>
+                            <span class="you">you</span>
+                            <span class="time">2 days ago</span>
+                        </div>
+                        <div class="delete-cancel">
+                            <button class="delete"><i class="fa-solid fa-trash-can"></i>Delete</button>
+                            <button class="reply-btn edit"><i class="fa-solid fa-pen"></i>Edit</button>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <p> <Span class="user">@ramsesmiron</Span> <span class="more-info">I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment add-comment">
+            <img src="images/avatars/image-juliusomo.png" alt="">
+            <!-- <input type="text" placeholder="add comment ..." class="type-comment"> -->
+            <textarea placeholder="add comment ..." class="type-comment"></textarea>
+            <input type="button" value="send" class="submit">
+        </div>
+    </section>>
+    <div class="panel">
+        <div class="content-panel">
+            <h3>Delete comment</h3>
+            <p>Are you sure you want to delete this<br> comment this will remove the comment<br> and can't be undone</p>
+            <div class="cancel">
+                <button class="no">no, cancel</button>
+                <button class="yes">yes, delete</button>
+            </div>
+        </div>
+    </div>
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+    </footer>
+      <script src="main.js"></script>
+</body>
+</html>
